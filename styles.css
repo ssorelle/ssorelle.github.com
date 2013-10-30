@@ -1,0 +1,121 @@
+body {
+	background-color: white;
+	font-family: "freightsans_regular", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	line-height: 22px;
+}
+
+.border {
+	background-color: whitesmoke;
+	height: 95%;
+	width: 95%;
+	margin: 0 0 0 1em;
+	padding: 0;
+
+}
+
+.headingbar {
+	background-color: #16a6b6;
+	color: white;
+	height: 4em;
+	padding-left: 0.3em;
+	font-weight: 400; 
+	font-size: 18px;
+}
+
+.topbody {
+	background-color: #d3d3d3;
+	color: black;
+	height: 12em;
+	padding-left: 0.3em;
+
+}
+
+#midparagraph {
+	padding-left: 1em;
+	padding-right: 0.7em;
+	font-family: "freightsans_regular", sans-serif;
+	font-weight: 300;
+	text-transform: none;
+}
+
+.bottombody {
+	background-color: #ee6557;
+	color: white;
+	height: 16em;
+	padding-left: 0.3em;
+}
+
+#comsites {
+	list-style-type: circle;
+}
+
+.bottombar {
+	background-color: #d3d3d3;
+	color: black;
+	height: 4em;
+	padding-bottom: 0em;
+	padding-left: 0.3em;
+}
+
+#tabs {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0 2em 0 2em;
+	border: 0.14em solid whitesmoke;
+	border-radius: 4px;
+	height: 3.3em;
+	width: 7em;
+	padding-left: 0.3em;
+	color: black;
+	background-color: whitesmoke;
+}
+
+
+.tablist {
+	margin-left: 13em;
+	margin-top: 0em;
+}
+
+.headbartext {
+	display: inline;
+	margin-right: 5em;
+}
+
+.socicons {
+	margin-left: 13em;
+	margin-bottom: 5em;
+}
+
+.bottombarp {
+	margin-bottom: 0em;
+	height: 0.65em;
+}
+
+#socialmedicons {
+	margin-left: 2.5em;
+	height: 3em;
+	width: 3em;
+}
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: #16a6b6;
+	font-style: bold;
+}
+
+#button {
+	width: 7em;
+	height: 4em;
+	background-color: #ee6557;
+	color: white;
+	border-radius: 5px;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
