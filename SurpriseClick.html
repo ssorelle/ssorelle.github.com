@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+</head>
+
+<body class="buttonbody">
+	<div>
+		<button type="button" class="surprisebutton" >Click Here for a Surprise</button>
+	
+	</div>
+
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		var colorz = ["url('photo 3.jpg')", "url('./Images/Twitter.png')", "url('./Images/Facebook.png')"]
+		var index = 0;
+		$('.surprisebutton').click(function(){
+			$('.buttonbody').css('background-image', colorz[index]);
+			if(index==2){
+				index=0;
+			}else{
+				index++;
+			}
+		});
+	});
+
+	</script>	
+</body>
+
+</html>
