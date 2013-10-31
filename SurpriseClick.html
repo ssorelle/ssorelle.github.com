@@ -17,9 +17,21 @@
 	<script type="text/javascript">
 
 	$(document).ready(function(){
-		var colorz = ["url('./Images/scary_halloween_01.gif')", "url('./Images/scary_halloween_03.gif')", "url('./Images/scary_halloween_02.gif')"]
 		var index = 0;
+		var colorz = ["url('./Images/funny_turkeys2.jpg')", "url('./Images/thanksgiving1.gif')", "url('./Images/thanksgiving2.jpg')"];
+		var today = new Date();
+		var dayoftheDead = new Date("Friday Oct 31 2013 23:59:00 GMT-0700 (PDT)");
+		var turkeytime = new Date("Sunday November 3 2013 00:00:00 GMT-0700(PDT)");
+
+		if(today >= dayoftheDead){
+			colorz = ["url('./Images/day-of-the-dead.jpg')", "url('./Images/dod16.jpg')", "url('./Images/dod2.jpg')"];
+		}else if (dayoftheDead >= turkeytime){
+			colorz = ["url('./Images/funny_turkeys2.jpg')", "url('./Images/thanksgiving1.gif')", "url('./Images/thanksgiving2.jpg')"];
+		}else{ colorz = ["url('./Images/scary_halloween_01.gif')", "url('./Images/scary_halloween_03.gif')", "url('./Images/scary_halloween_02.gif')"];
+		};
+
 		$('.surprisebutton').click(function(){
+			$('.surprisebutton').css('background-color', 'red')
 			$('.buttonbody').css('background-image', colorz[index]);
 			if(index==2){
 				index=0;
