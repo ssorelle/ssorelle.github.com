@@ -4,50 +4,65 @@
 <head>
 	<title>Draw a Mondrian</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 </head>
 
 <body>
-	<p style="margin-top:3em;margin-left:26em;">Pick a Color and Click a Square</p>
+	<p style="margin-top:3em;margin-left:15.5em; font-size: 24px;">Pick a Color and Click a Square</p>
 
 	<div style="padding: 0.7em;margin:3em;background-color:lightgray;height:100%;">
 		<div style="display:inline-block;">
 			<ul style="margin-top: 0; margin-bottom: 12em;">
-				<li id="colorblks" style="background-color: red; margin-top: 0;"></li>
-				<li id="colorblks" style="background-color: yellow"></li>
-				<li id="colorblks" style="background-color: blue"></li>
-				<li id="colorblks" style="background-color: white"></li>
+				<li id="red" class="colorblks" style="background-color: red; margin-top: 0;"></li>
+				<li id="yellow" class="colorblks" style="background-color: yellow"></li>
+				<li id="blue" class="colorblks" style="background-color: blue"></li>
+				<li id="white" class="colorblks" style="background-color: white"></li>
 			</ul>
 		</div>
 
 		<div style="display:inline-block">
 			<table>
 				<tr>
-					<td id="sq1" style="width:140px; height: 100px; border-right-width: 0.25em; border-bottom-width: 0.25em;">data1</td>
-					<td id="sq5" style="width:310px; height: 100px; border-bottom-width: 0.25em;">data5</td>
-					<td id="sq9" style="width:100px; height: 100px; border-right-width: 0.25em; border-bottom-width: 0.25em; border-left-width: 0.25em;">data9</td>
-					<td id="sq13" style="width:150px; height: 100px; border-bottom-width: 0.25em;">data13</td>
+					<td class="squarz" id="sq1" style="width:140px; height: 100px; border-right-width: 0.25em; border-bottom-width: 0.25em;"></td>
+					<td class="squarz" id="sq5" style="width:310px; height: 100px; border-bottom-width: 0.25em;"></td>
+					<td class="squarz" id="sq9" style="width:100px; height: 100px; border-right-width: 0.25em; border-bottom-width: 0.25em; border-left-width: 0.25em;"></td>
+					<td class="squarz" id="sq13" style="width:150px; height: 100px; border-bottom-width: 0.25em;"></td>
 				</tr>
 				<tr>
-					<td id="sq2" style="width:140px; height: 180px; border-right-width: 0.25em; border-bottom-width: 0.25em;">data2</td>
-					<td id="sq6" style="width:310px; height: 180px; border-bottom-width: 0.25em;">data6</td>
-					<td id="sq10" style="width:100px; height: 180px; border-right-width: 0.25em; border-bottom-width: 0.25em; border-left-width: 0.25em;">data10</td>
-					<td id="sq14" style="width:150px; height: 180px; border-bottom-width: 0.25em;">data14</td>
+					<td class="squarz" id="sq2" style="width:140px; height: 180px; border-right-width: 0.25em; border-bottom-width: 0.25em;"></td>
+					<td class="squarz" id="sq6" style="width:310px; height: 180px; border-bottom-width: 0.25em;"></td>
+					<td class="squarz" id="sq10" style="width:100px; height: 180px; border-right-width: 0.25em; border-bottom-width: 0.25em; border-left-width: 0.25em;"></td>
+					<td class="squarz" id="sq14" style="width:150px; height: 180px; border-bottom-width: 0.25em;"></td>
 				</tr>
 				<tr>
-					<td id="sq3" style="width:140px; height: 80px;border-right-width: 0.25em; border-bottom-width: 0.25em;">data3</td>
-					<td id="sq7" style="width:310px; height: 80px;border-bottom-width: 0.25em;">data7</td>
-					<td id="sq11" style="width:100px; height: 80px;border-right-width: 0.25em; border-bottom-width: 0.25em; border-left-width: 0.25em;">data11</td>
-					<td id="sq15" style="width:150px; height: 80px;border-bottom-width: 0.25em;">data15</td>
+					<td class="squarz" id="sq3" style="width:140px; height: 80px;border-right-width: 0.25em; border-bottom-width: 0.25em;"></td>
+					<td class="squarz" id="sq7" style="width:310px; height: 80px;border-bottom-width: 0.25em;"></td>
+					<td class="squarz" id="sq11" style="width:100px; height: 80px;border-right-width: 0.25em; border-bottom-width: 0.25em; border-left-width: 0.25em;"></td>
+					<td class="squarz" id="sq15" style="width:150px; height: 80px;border-bottom-width: 0.25em;"></td>
 				</tr>
 				<tr>
-					<td id="sq4" style="width:140px; height: 120px;border-right-width: 0.25em;">data4</td>
-					<td id="sq8" style="width:310px; height: 120px;">data8</td>
-					<td id="sq12" style="width:100px; height: 120px;border-right-width: 0.25em;border-left-width: 0.25em;">data12</td>
-					<td id="sq16" style="width:150px; height: 120px;">data16</td>
+					<td class="squarz" id="sq4" style="width:140px; height: 120px;border-right-width: 0.25em;"></td>
+					<td class="squarz" id="sq8" style="width:310px; height: 120px;"></td>
+					<td class="squarz" id="sq12" style="width:100px; height: 120px;border-right-width: 0.25em;border-left-width: 0.25em;"></td>
+					<td class="squarz" id="sq16" style="width:150px; height: 120px;"></td>
 				</tr>
 			</table>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.colorblks').click(function(e){
+				 var clicked = e.currentTarget.id
+				 var strClicked = String(clicked);
+				 console.log(clicked);
+				$('.squarz').click(function(){
+					$(this).css('background-color', strClicked);
+				});
+			});
+		});
+	</script>
 </body>
 </html>
 
