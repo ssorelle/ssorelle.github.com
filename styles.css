@@ -159,3 +159,31 @@ a:visited {
 	/*background-image:url('photo 3.jpg');*/
 	background-color: whitesmoke;
 }
+
+#colorblks {
+	list-style-type: none;
+	margin: 2em 2em 0 2em;
+	border: 0;
+	height: 4em;
+	width: 4em;
+	padding-left: 0.3em;
+	color: black;
+	background-color: whitesmoke;
+
+}
+
+td {
+	height: 3em;
+	width: 5em;
+	border-width: 0.08em;
+	border-style: solid;
+	margin: 0;
+}
+
+table {
+	margin-top: 5em;
+	margin-bottom: 6em;
+	margin-left: 4em;
+	border-collapse: collapse;
+	background-color: white;	
+}
